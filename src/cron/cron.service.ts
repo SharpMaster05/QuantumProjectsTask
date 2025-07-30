@@ -7,7 +7,7 @@ import { v4 } from 'uuid';
 export class CronService {
 	constructor(private readonly service : ContextService){}
 
-	@Cron('*/1 * * * *')
+	@Cron('*/30 * * * *')
 	public cronCall(){
 		this.service.run(() => {
 			const executionId = v4();
